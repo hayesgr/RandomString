@@ -23,6 +23,9 @@ code further if I chose to do so. But you have to strike a balance between at ti
 or ledgible and other aspects. I figure most programmers with my experience aren't likely to be the one's looking
 at this. So I wanted it at least readable enough for who might look at it.
 
+Note:
+Went ahead and added a reduced code version in comments in generate.c. It is only 20 lines if you remove comments.
+
 There are always factors one needs to consider when it comes to a project. Performance, size, security/safety, stability,
 maintainability, readability, expandability. I've spent a lot of time working in areas that if I mess up on production code
 it costs lives not just takes a server down or shows data or information it shouldn't. Industrial control systems are an example.
