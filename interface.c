@@ -8,7 +8,7 @@ unsigned int string_size(){
     return r;
 }
 unsigned int string_type(){
-    int r=0;
+    unsigned int r=0;
     printf("Select teh option specified below to generate [no commas or spaces]:\n");
     printf("1 - lower [a-z]\n");
     printf("2 - upper [A_Z]\n");
