@@ -45,7 +45,7 @@ int generate_str(char **str,unsigned int type, unsigned int length){
     char lower[] = "abcdefghijklmnopqrstuvwxyz";
     char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char numbers[] = "0123456789";
-    char symbols[] = {33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,58,59,60,61,62,63,64,91,92,93,94,95,96,123,124,125,126};
+    char symbols[] = {33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,58,59,60,61,62,63,64,91,92,93,94,95,96,123,124,125,126,'\0'};
     char *arrs[4] = {lower,upper,numbers,symbols};
     //Allocate temp string
     char *temp_str = malloc(sizeof(char)*length+1);
@@ -55,7 +55,7 @@ int generate_str(char **str,unsigned int type, unsigned int length){
     temp = type;
     for(unsigned int i=0;i<length;i++){
         if(temp==0){temp=type;}
-        temp_str[i]=arrs[(temp%10)-1][rand()%(sizeof(arrs[temp%10])-1)];
+        temp_str[i]=arrs[(temp%10)-1][rand()%(strlen(arrs[temp%10-1])-2)];
         temp/=10;
     }
     *str = temp_str;
@@ -73,7 +73,7 @@ int generate_str(char **str,unsigned int type, unsigned int length){
     temp = type;
     for(unsigned int i=0;i<length;i++){
         if(temp==0){temp=type;}
-        temp_str[i]=sets[(temp%10)-1][rand()%(sizeof(sets[temp%10])-1)];
+        temp_str[i]=sets[(temp%10)-1][rand()%(strlen(sets[temp%10-1])-2)];
         temp/=10;
     }
     *str = temp_str;
