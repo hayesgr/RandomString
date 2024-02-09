@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+
 int generate_str(char **str,unsigned int type, unsigned int length);
 
 
