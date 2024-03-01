@@ -62,7 +62,7 @@ int generate_str(char **str,unsigned int type, unsigned int length){
     return 1;
 }
 */
-/* A slightly different alternative only 16 lines
+/* A slightly different alternative only 15 lines
 int generate_str(char **str,unsigned int type, unsigned int length){
     struct timeval t1; gettimeofday(&t1, NULL); srand(t1.tv_usec*t1.tv_sec);
     unsigned int temp=type;
