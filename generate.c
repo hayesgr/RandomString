@@ -64,7 +64,7 @@ int generate_str(char **str,unsigned int type, unsigned int length){
 */
 /* A slightly different alternative only 15 lines
 int generate_str(char **str,unsigned int type, unsigned int length){
-    struct timeval t1; gettimeofday(&t1, NULL); srand(t1.tv_usec*t1.tv_sec);
+    struct timeval t1; gettimeofday(&t1, NULL); srand(t1.tv_usec*t1.tv_sec);    //should place in main()
     unsigned int temp=type;
     char* sets[4] = {"abcdefghijklmnopqrstuvwxyz","ABCDEFGHIJKLMNOPQRSTUVWXYZ","0123456789","!\"#$%^&*()+_-=':;><,.?/|{}[]`~"};
     char *temp_str = malloc(sizeof(char)*length+1);
